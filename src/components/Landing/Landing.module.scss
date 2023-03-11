@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .container {
   width: 100%;
   height: 55vh;
@@ -24,11 +26,12 @@
       justify-content: center;
 
       img {
-        max-width: 70%;
+        width: 70%;
       }
     }
 
     .content {
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -48,7 +51,66 @@
       }
 
       .heading {
-        font-size: 7rem;
+        padding: 1rem;
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .heading {
+    font-size: 5rem !important;
+  }
+
+  img {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: $lg) {
+  .headingWrapper {
+    font-size: 1.5rem !important;
+  }
+  .heading {
+    font-size: 3.5rem !important;
+  }
+
+  img {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: $md) {
+  .container {
+    height: 90vh;
+
+    .wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50% 50%;
+
+      img {
+        min-width: 50% !important;
+        margin-bottom: 8rem;
+      }
+
+      .headingWrapper {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        font-size: 2rem;
+
+        .line {
+          width: 5rem;
+          height: 1px;
+          background-color: #fff;
+        }
+      }
+
+      .heading {
+        padding: 1rem;
+        font-size: 6rem !important;
       }
     }
   }
