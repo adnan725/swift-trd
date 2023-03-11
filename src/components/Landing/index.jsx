@@ -1,4 +1,5 @@
 import styles from "./Landing.module.scss";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -10,6 +11,7 @@ const Landing = () => {
             <div className={styles.line}></div>
           </div>
           <div className={styles.heading}>Our Priority</div>
+          <button className={styles.btnProducts}>Products</button>
         </div>
         <div className={styles.image}>
           <img src={process.env.PUBLIC_URL + "/media/images/scissor.png"} />
