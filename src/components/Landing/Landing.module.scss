@@ -1,29 +1,23 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .container {
   width: 100%;
   height: 55vh;
   color: $color-secondary;
   background-color: $color-black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   .wrapper {
     width: 100%;
     height: 100%;
     gap: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
 
     .content,
     .image {
       width: 70%;
       height: 70%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex(row, center, center);
 
       img {
         width: 70%;
@@ -33,15 +27,12 @@
     .content {
       padding: 1rem;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flex(column, center, center);
 
       .headingWrapper {
-        display: flex;
-        align-items: baseline;
         gap: 1rem;
         font-size: 2rem;
+        @include flex(row, baseline, "");
 
         .line {
           width: 5rem;
@@ -56,14 +47,14 @@
       }
 
       .btnProducts {
-        cursor: pointer;
         border: none;
+        cursor: pointer;
         margin-top: 3rem;
         margin-right: 25%;
         font-size: 1.1rem;
         padding: 0.8rem 2rem;
-        color: $color-secondary;
         transition: all 300ms;
+        color: $color-secondary;
         background-color: $color-primary;
 
         &:hover,
@@ -105,9 +96,7 @@
     height: 90vh;
 
     .wrapper {
-      display: grid !important;
-      grid-template-columns: 1fr;
-      grid-template-rows: 50% 50%;
+      @include grid-col-one;
       align-items: center;
       justify-items: center;
 

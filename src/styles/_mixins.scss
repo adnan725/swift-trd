@@ -1,0 +1,21 @@
+// FLEX
+
+@mixin flex($direction, $align-items: "", $justify-content: "") {
+  display: flex;
+  flex-direction: $direction;
+
+  @if ($align-items != "") {
+    align-items: $align-items;
+  }
+
+  @if ($justify-content != "") {
+    justify-content: $justify-content;
+  }
+}
+
+// GRID
+
+@mixin grid-col-one {
+  display: grid;
+  grid-template-columns: 1fr;
+}
