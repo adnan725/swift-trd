@@ -19,3 +19,13 @@
   display: grid;
   grid-template-columns: 1fr;
 }
+
+@mixin grid-col-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@mixin grid-col-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
