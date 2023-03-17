@@ -3,6 +3,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import BusinessIcon from "@mui/icons-material/Business";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Footer = () => {
   return (
@@ -79,19 +83,27 @@ const Footer = () => {
           <div className={styles.links}>Social Media</div>
           <ul className={styles.items}>
             <li>
-              <span className={styles.logoWrapper}></span>
+              <span className={styles.logoWrapper}>
+                <LinkedInIcon className={styles.icon} />
+              </span>
               <span>Linkedin</span>
             </li>
             <li>
-              <span className={styles.logoWrapper}></span>
+              <span className={styles.logoWrapper}>
+                <InstagramIcon className={styles.icon} />
+              </span>
               <span>Instagram</span>
             </li>
             <li>
-              <span className={styles.logoWrapper}></span>
+              <span className={styles.logoWrapper}>
+                <FacebookIcon className={styles.icon} />
+              </span>
               <span>Facebook</span>
             </li>
             <li>
-              <span className={styles.logoWrapper}></span>
+              <span className={styles.logoWrapper}>
+                <TwitterIcon className={styles.icon} />
+              </span>
               <span>Twitter</span>
             </li>
           </ul>

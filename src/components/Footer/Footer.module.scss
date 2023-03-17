@@ -32,6 +32,7 @@
         @include flex(column, 1rem, flex-start, center);
 
         li {
+          transition: all 200ms;
           @include flex(row, 0.5rem, center, center);
 
           .logoWrapper {
@@ -42,6 +43,11 @@
             .icon {
               color: $color-primary;
             }
+          }
+
+          &:hover {
+            cursor: pointer;
+            margin-left: 0.75rem;
           }
         }
       }
