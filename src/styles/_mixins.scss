@@ -1,8 +1,12 @@
 // FLEX
 
-@mixin flex($direction, $align-items: "", $justify-content: "") {
+@mixin flex($direction, $gap: "", $align-items: "", $justify-content: "") {
   display: flex;
   flex-direction: $direction;
+
+  @if ($gap != "") {
+    gap: $gap;
+  }
 
   @if ($align-items != "") {
     align-items: $align-items;
@@ -15,17 +19,70 @@
 
 // GRID
 
-@mixin grid-col-one {
+@mixin grid-col-one($gap: "", $align-items: "", $justify-items: "") {
   display: grid;
+
   grid-template-columns: 1fr;
+  @if ($gap != "") {
+    gap: $gap;
+  }
+
+  @if ($align-items != "") {
+    align-items: $align-items;
+  }
+
+  @if ($justify-items != "") {
+    justify-items: $justify-items;
+  }
 }
 
-@mixin grid-col-two {
+@mixin grid-col-two($gap: "", $align-items: "", $justify-items: "") {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+  @if ($gap != "") {
+    gap: $gap;
+  }
+
+  @if ($align-items != "") {
+    align-items: $align-items;
+  }
+
+  @if ($justify-items != "") {
+    justify-items: $justify-items;
+  }
 }
 
-@mixin grid-col-three {
+@mixin grid-col-three($gap: "", $align-items: "", $justify-items: "") {
   display: grid;
+
   grid-template-columns: 1fr 1fr 1fr;
+  @if ($gap != "") {
+    gap: $gap;
+  }
+
+  @if ($align-items != "") {
+    align-items: $align-items;
+  }
+
+  @if ($justify-items != "") {
+    justify-items: $justify-items;
+  }
+}
+
+@mixin grid-col-four($gap: "", $align-items: "", $justify-items: "") {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @if ($gap != "") {
+    gap: $gap;
+  }
+
+  @if ($align-items != "") {
+    align-items: $align-items;
+  }
+
+  @if ($justify-items != "") {
+    justify-items: $justify-items;
+  }
 }
