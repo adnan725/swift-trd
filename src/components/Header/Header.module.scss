@@ -5,9 +5,24 @@
   width: 100%;
   height: 10vh;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .burger {
+    top: 50%;
+    right: 1rem;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    @include diementions(2.5rem, 2.5rem);
+
+    .icon {
+      color: $color-primary;
+      @include diementions(100%, 100%);
+    }
+  }
 
   header {
     width: 90%;

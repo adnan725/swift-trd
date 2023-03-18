@@ -1,3 +1,10 @@
+// Diementions
+
+@mixin diementions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 // FLEX
 
 @mixin flex($direction, $gap: "", $align-items: "", $justify-content: "") {

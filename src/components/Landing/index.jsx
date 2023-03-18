@@ -9,8 +9,10 @@ const Landing = () => {
             <span className={styles.subHeading}>Your Satisfaction</span>
             <div className={styles.line}></div>
           </div>
-          <div className={styles.heading}>Our Priority</div>
-          <button className={styles.btnProducts}>Products</button>
+          <div className={styles.heading}>
+            <span>Our</span> <span>Priority</span>
+            <button className={styles.btnProducts}>Products</button>
+          </div>
         </div>
         <div className={styles.image}>
           <img src={process.env.PUBLIC_URL + "/media/images/scissor.png"} />
