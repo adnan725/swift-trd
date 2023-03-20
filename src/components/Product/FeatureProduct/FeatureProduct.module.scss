@@ -1,0 +1,82 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.container {
+  background-color: #000000;
+  @include diementions(100%, "");
+  @include flex(row, "", center, center);
+
+  .wrapper,
+  .wrapperReverse {
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include diementions(100%, 100%);
+    background-image: url("https://ghasonsintl.com/wp-content/uploads/2022/06/Untitled-design-8-1.png");
+
+    .left,
+    .right {
+      width: 35%;
+      padding: 1rem 1rem;
+      text-align: center;
+      @include flex(row, "", center, center);
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .right {
+      @include flex(column, "", center, center);
+
+      p {
+        margin-top: 4rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+        margin: 1rem 0 3rem;
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+        transition: all 300ms;
+        color: $color-secondary;
+        background-color: $color-primary;
+
+        &:hover,
+        &:active {
+          background-color: $color-primary-dark;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    color: $color-black;
+    background-color: $color-white;
+    @include flex(row, "", center, center);
+  }
+
+  .wrapperReverse {
+    color: $color-secondary;
+    background-color: $color-black;
+    @include flex(row-reverse, "", center, center);
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .wrapper,
+  .wrapperReverse {
+    flex-direction: column !important;
+
+    .left,
+    .right {
+      width: 80% !important;
+    }
+  }
+}

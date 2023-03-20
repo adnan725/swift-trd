@@ -46,6 +46,10 @@
         font-size: 6rem;
         color: $color-primary;
         @include flex(column, center, flex-start);
+
+        .priority {
+          letter-spacing: 2px;
+        }
       }
 
       .btnProducts {

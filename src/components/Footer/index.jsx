@@ -50,6 +50,10 @@ const Footer = () => {
             </li>
             <li>
               <span>→</span>
+              <span>Contact</span>
+            </li>
+            <li>
+              <span>→</span>
               <span>Business Policy</span>
             </li>
             <li>

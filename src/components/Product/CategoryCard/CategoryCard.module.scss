@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.container {
+  cursor: pointer;
+  flex-wrap: wrap;
+  @include flex(row, 1.5rem, center, center);
+
+  .wrapper {
+    flex-wrap: wrap;
+    border-radius: 7px;
+    transition: all 200ms;
+    background-color: $color-secondary;
+    @include diementions(250px, "");
+
+    &:hover {
+      scale: 1.05;
+    }
+
+    img {
+      @include diementions(100%, 70%);
+    }
+
+    .content {
+      padding: 0.5rem;
+      color: $color-black;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      background-color: $color-secondary-dark;
+      @include diementions(100%, 30%);
+      @include flex(column, 0.3rem, flex-start, center);
+
+      .catName {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+}
